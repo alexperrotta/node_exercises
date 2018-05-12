@@ -1,0 +1,14 @@
+{
+  "name": "read-a-file",
+  "version": "1.0.0",
+  "description": "Reads a line of a file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Perrotta",
+  "license": "ISC",
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
