@@ -28,6 +28,7 @@ function saveWebPage(url, filename, callback) {
             return;
             }
             console.log('It worked');
+            callback();
         });
     });
 }
@@ -36,9 +37,10 @@ module.exports = { saveWebPage };
 
 
 // A separate file
+// get the url and save it to a file, then log to the console
 
 const save = require('./save-web-page');
-
+// 3 argurments, the function is the callback
 save.saveWebPage('https://en.wikipedia.org/wiki/Continuation-passing_style', 'output.txt', () => {
-    console.log('file saved');
+    console.log('ran callback. file saved');
 };
