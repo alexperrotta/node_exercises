@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
         
     })
 
-    
+    // get a blog post
     router.get('/:postId', (req, res, next) => {
         readFile('blog-posts.json')
           .then((data) => {
@@ -52,5 +52,27 @@ router.get('/', function(req, res, next) {
             console.log(err);
           })
       });
+
+      // render an about page
+
+
+
+
+
+
+      // add another route that listens for GET requests at the path "/new-post". This route should render a 
+      // template that shows an HTML form for a new blog post
+    //   on this form, set the "action" attribute to "/new-post" and set the "method" attribute to "POST". (When the user fills out and submits the form, it will try to send a POST request to the Express server. You'll create another route for this in the next step.)
+
+      router.get('/new-post', req, res, next => {
+
+
+
+        res.render('blog-post', blogPostData);
+
+      });
+
+    // add yet another route that listens for POST requests at the path "/new-post". This route should read the data that was sent from the form and save it to "blog-posts.json" file. After that, you still need to send a response back to the browser. Your response could be a simple page with the message "Blog post saved successfully".
+
 
 module.exports = router;
